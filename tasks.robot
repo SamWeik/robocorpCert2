@@ -12,7 +12,6 @@ Library    RPA.Desktop
 Library    RPA.Tables
 Library    RPA.Archive
 Library    OperatingSystem
-Library    RPA.FTP
 
 *** Tasks ***
 Order robots from RobotSpareBin Industries Inc
@@ -55,7 +54,7 @@ Preview the robot
     Click Button    Preview
 
 Submit the order
-    Wait Until Keyword Succeeds    4x    0.5s    Submit
+    Wait Until Keyword Succeeds    5x    0.5s    Submit
 
 Submit
     Click Button    order
@@ -78,7 +77,6 @@ Embed the robot screenshot to the receipt PDF file
     ...    ${pdf}
     ...    ${screenshot}
     Add Files To Pdf    ${files}    ${pdf}
-    Delete   ${screenshot}
 
 Go to order another robot
     Click Button    order-another
